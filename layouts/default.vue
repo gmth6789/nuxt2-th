@@ -2,19 +2,15 @@
   <v-app>
     <nuxt></nuxt>
     <Dialog/>
-    <Tabbar/>
   </v-app>
 </template>
 
-
 <script>
 import Dialog from '~/components/Dialog'
-import Tabbar from '~/components/Tabbar.vue'
 
 export default {
   components: {
-    Dialog,
-    Tabbar
+    Dialog
   }
 }
 </script>
@@ -29,11 +25,11 @@ export default {
     font-weight: bold;
   }
   .v-application .primary{
-    background-color: #f01482 !important;
-    border-color: #df1283 !important;
+    background-color: #1A56BE !important;
+    border-color: #1A56BE !important;
   }
   .text-primary{
-    color: #fa179b !important;
+    color: #1A56BE !important;
   }
   .bold{
     font-weight: bold;
@@ -56,7 +52,7 @@ export default {
     font-weight: bold;
     min-height: 50px;
     &.outlined{
-      border: 1px solid #f52284;
+      border: 1px solid #1A56BE;
       border-radius: 28px;
       line-height: normal;
     }
