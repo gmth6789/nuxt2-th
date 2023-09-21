@@ -1,62 +1,70 @@
 <template>
-  <div>
-    <Nuxt />
-  </div>
+  <v-app>
+    <nuxt></nuxt>
+    <Dialog/>
+    <Tabbar/>
+  </v-app>
 </template>
 
-<style>
-html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
+<script>
+import Dialog from '~/components/Dialog'
+import Tabbar from '~/components/Tabbar.vue'
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+export default {
+  components: {
+    Dialog,
+    Tabbar
+  }
 }
+</script>
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
+<style lang="scss">
+  .v-application{
+    font-family: 'Quicksand', sans-serif;
+  }
+  .v-toolbar__title{
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+  }
+  .v-application .primary{
+    background-color: #f01482 !important;
+    border-color: #df1283 !important;
+  }
+  .text-primary{
+    color: #fa179b !important;
+  }
+  .bold{
+    font-weight: bold;
+  }
+  .text-main{
+    font-size: 20px;
+  }
+  .text-title{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .w-100{
+    width: 100%;
+  }
+  .my-btn{
+    font-size: 20px !important;
+    text-transform: none !important;
+    height: auto !important;
+    padding: 10px 0 !important;
+    font-weight: bold;
+    min-height: 50px;
+    &.outlined{
+      border: 1px solid #f52284;
+      border-radius: 28px;
+      line-height: normal;
+    }
+  }
+  .mt-100{
+    margin-top: 100px;
+  }
+  .set-padding{
+    padding: 0 10px;
+  }
 </style>
