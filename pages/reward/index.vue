@@ -54,17 +54,17 @@
 export default {
   mounted(){
     liff.init({
-      liffId: '1654259572-eY7zEd2M'
+      liffId: '2000841019-5XDYQxPw'
     }).then(() => {
       if(liff.isLoggedIn()){
         liff.getProfile().then(profile => {
           this.$store.dispatch('setLine', profile);
-          this.$axios.get(`https://nuxt-tutor.firebaseio.com/members/${this.$store.getters.getLine.userId}/profile.json`).then((res) => {            
+          this.$axios.get(`https://auth-gmth-default-rtdb.asia-southeast1.firebasedatabase.app/members/${this.$store.getters.getLine.userId}/profile.json`).then((res) => {            
             if(res.data != null){
               this.$store.dispatch('setUser', res.data);
             }
           });
-          this.$axios.get(`https://nuxt-tutor.firebaseio.com/rewards/${this.$store.getters.getLine.userId}.json`).then((res) => {            
+          this.$axios.get(`https://auth-gmth-default-rtdb.asia-southeast1.firebasedatabase.app/rewards/${this.$store.getters.getLine.userId}.json`).then((res) => {            
             if(res.data != null){
               this.stamps = res.data
             }
@@ -102,7 +102,7 @@ export default {
           }
           return obj;
         })
-        this.$axios.patch(`https://nuxt-tutor.firebaseio.com/rewards/${this.$store.getters.getLine.userId}.json`, {...this.stamps}).then((res) => {            
+        this.$axios.patch(`https://auth-gmth-default-rtdb.asia-southeast1.firebasedatabase.app/rewards/${this.$store.getters.getLine.userId}.json`, {...this.stamps}).then((res) => {            
 
         }).catch(e => alert(e))
       }).catch(e => alert(e))

@@ -167,7 +167,7 @@ export default {
     register() {
       if(this.validate()){
         this.$store.dispatch('setRegister', this.form)
-        this.$axios.patch(`https://nuxt-tutor.firebaseio.com/members/${this.$store.getters.getLine.userId}/profile.json`, this.$store.getters.getRegister).then((res) => {
+        this.$axios.patch(`https://auth-gmth-default-rtdb.asia-southeast1.firebasedatabase.app/members/${this.$store.getters.getLine.userId}/profile.json`, this.$store.getters.getRegister).then((res) => {
           this.$router.push('/register/done')
         }).catch(e => console.log(e))         
       }      
