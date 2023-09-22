@@ -15,6 +15,10 @@
             Step 1 of 2
           </div>
         </v-col>
+
+        <v-col col="10" lg="4">
+        <v-card>
+
         <v-col cols="12" class="text-center pb-0 profile-img">
           <img v-if="getLine.pictureUrl == ''" src="~/assets/profile.png" alt="" width="155">
           <img v-else :src="getLine.pictureUrl" alt="" width="155">
@@ -48,6 +52,11 @@
             <v-btn rounded color="primary" dark class="w-100 mt-10 my-btn" @click="next">Next</v-btn>
           </v-form>
         </v-col>
+
+
+</v-card>
+</v-col>
+
       </v-row>
     </v-container>        
   </div>
