@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "nuxtbuild": [
+  "builds": [
     {
       "src": "nuxt.config.js",
       "use": "@nuxtjs/vercel-builder"
