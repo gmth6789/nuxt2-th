@@ -19,10 +19,14 @@
         <v-col col="10" lg="4">
         <v-card>
 
-        <v-col cols="12" class="text-center pb-0 profile-img">
-          <img v-if="getLine.pictureUrl == ''" src="~/assets/profile.png" alt="" width="155">
-          <img v-else :src="getLine.pictureUrl" alt="" width="155">
-        </v-col>
+        <div class="text-center">
+        <v-avatar color="indigo lighten-4">
+        <v-icon color="indigo">mdi-account</v-icon>
+
+        </v-avatar>
+        
+        </div>
+
         <v-col cols="12" class="text-center pt-2 pb-0">
           {{ getLine.displayName }}
         </v-col>
