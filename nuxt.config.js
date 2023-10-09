@@ -34,8 +34,7 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+  plugins: ['~/plugins/vant'],
   /*
   ** Nuxt.js dev-modules
   */
