@@ -34,7 +34,7 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['~/plugins/vant'],
+  plugins: ['~/plugins/vant','~/plugins/liff-init.client.js',],
   /*
   ** Nuxt.js dev-modules
   */
