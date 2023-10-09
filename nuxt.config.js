@@ -1,86 +1,41 @@
-import colors from 'vuetify/es5/util/colors'
-
 export default {
-  mode: 'universal',
-  /*
-  ** Headers of the page
-  */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    title: 'LIFF Starter',
+    htmlAttrs: {
+      lang: 'en'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: '' },
+      { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href:'https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap'},
-      { rel: 'stylesheet', href:'https://fonts.googleapis.com/icon?family=Material+Icons'}
-    ],
-    script: [
-      { src: 'https://static.line-scdn.net/liff/edge/2.1/sdk.js' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
-  /*
-  ** Global CSS
-  */
+
+  // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
-  /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: ['~/plugins/liff-init.client.js',],
-  /*
-  ** Nuxt.js dev-modules
-  */
+
+  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+  plugins: [
+    '~/plugins/liff-init.client.js', // add liff.init() plugin
+  ],
+
+  // Auto import components: https://go.nuxtjs.dev/config-components
+  components: true,
+
+  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/vuetify',
   ],
-  /*
-  ** Nuxt.js modules
-  */
+
+  // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
   ],
-  /*
-  ** Axios module configuration
-  ** See https://axios.nuxtjs.org/options
-  */
-  axios: {
-  },
-  /*
-  ** vuetify module configuration
-  ** https://github.com/nuxt-community/vuetify-module
-  */
-  vuetify: {
-    customVariables: ['~/assets/variables.scss'],
-    // treeShake: true,    
-    theme: {
-      dark: false,
-      themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
-    }
-  },
-  /*
-  ** Build configuration
-  */
+
+  // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
 
