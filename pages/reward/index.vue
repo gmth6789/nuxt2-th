@@ -60,7 +60,7 @@ export default {
       if(liff.isLoggedIn()){
         liff.getProfile().then(profile => {
           this.$store.dispatch('setLine', profile);
-          this.$axios.get(`https://auth-gmth-default-rtdb.asia-southeast1.firebasedatabase.app/members/${this.$store.getters.getLine.userId}/profile.json`).then((res) => {            
+          this.$axios.get(`https://auth-gmth-default-rtdb.asia-southeast1.firebasedatabase.app/embers/${this.$store.getters.getLine.userId}/profile.json`).then((res) => {            
             if(res.data != null){
               this.$store.dispatch('setUser', res.data);
             }
